@@ -1,38 +1,29 @@
-import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './feedback.css';
 
-const Feedback = () => {
-  const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
-
-  const handleFeedback = (type) => {
-    setFeedback({ ...feedback, [type]: feedback[type] + 1 });
+const Feedback = ({ onLeaveFeedback }) => {
+  const handleFeedback = (feedbackType) => {
+    onLeaveFeedback({ target: { name: feedbackType } }); // Symulacja poprawnego obiektu zdarzenia
   };
 
   return (
     <div className="button_list">
-      <button
-        type="button"
-        name="good"
-        onClick={() => handleFeedback('good')}
-        className="button">
+      <button type="button" onClick={() => handleFeedback('good')} className="button">
         Good
       </button>
-      <button
-        type="button"
-        name="neutral"
-        onClick={() => handleFeedback('neutral')}
-        className="button">
+      <button type="button" onClick={() => handleFeedback('neutral')} className="button">
         Neutral
       </button>
-      <button
-        type="button"
-        name="bad" onClick={() => handleFeedback('bad')}
-        className="button">
+      <button type="button" onClick={() => handleFeedback('bad')} className="button">
         Bad
       </button>
     </div>
   );
+};
+
+Feedback.propTypes = {
+  onLeaveFeedback: PropTypes.func,
 };
 
 export default Feedback;

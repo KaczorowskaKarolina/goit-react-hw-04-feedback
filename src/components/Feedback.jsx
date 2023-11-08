@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './feedback.css';
+import '../styles/feedback.css';
 
 const Feedback = ({ onLeaveFeedback }) => {
   const handleFeedback = (feedbackType) => {

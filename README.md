@@ -8,7 +8,7 @@ Simple application showing satisfaction statistics
 
 ---
 
-Expresso cafe collects feedback from its customers. Statistics collection
+Expresso cafe collects feedback from it's customers. Statistics collection
 application. There are only three answer options: good, neutral, bad. The
 application displays the number of responses collected for each category, the
 total number of votes cast and the percentage of positive responses.
@@ -40,10 +40,7 @@ total number of votes cast and the percentage of positive responses.
 
 ---
 
-. |-- public/ # Public files |-- src/ # Application source files |--
-components/ # Application components |-- styles/ # Style sheets |-- App.jsx #
-The main component of the application |-- package.json # Dependencies and
-scripts |-- README.md # README file
+![Project structure](src/Project_structure.jpg)
 
 ## Author
 
